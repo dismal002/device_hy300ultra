@@ -1,0 +1,6 @@
+# Health
+ro.charger.enable_suspend=true
+
+# Miscellaneous
+dalvik.vm.systemservercompilerfilter=speed-profile
+ro.product.cpu.pagesize.max=4096

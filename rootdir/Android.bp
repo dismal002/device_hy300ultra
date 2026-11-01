@@ -1,0 +1,54 @@
+//
+// SPDX-FileCopyrightText: The LineageOS Project
+// SPDX-License-Identifier: Apache-2.0
+//
+
+// Init scripts
+// Init configuration files
+prebuilt_etc {
+    name: "init.common.rc",
+    src: "etc/init.common.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.ram.rc",
+    src: "etc/init.ram.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.sun50iw15p1.rc",
+    src: "etc/init.sun50iw15p1.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.sun50iw15p1.usb.rc",
+    src: "etc/init.sun50iw15p1.usb.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "init.tv_input.rc",
+    src: "etc/init.tv_input.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+// fstab
+prebuilt_etc {
+    name: "fstab.1024m",
+    src: "etc/fstab.1024m",
+    vendor: true,
+}
+
+prebuilt_etc {
+    name: "fstab.sun50iw15p1",
+    src: "etc/fstab.sun50iw15p1",
+    vendor: true,
+}

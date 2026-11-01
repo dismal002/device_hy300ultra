@@ -1,0 +1,17 @@
+on boot
+    # usb driver
+    insmod /vendor/lib/modules/sunxi-hci.ko
+    insmod /vendor/lib/modules/ehci-sunxi.ko
+    insmod /vendor/lib/modules/ohci-sunxi.ko
+    insmod /vendor/lib/modules/sunxi_usb_udc.ko
+    insmod /vendor/lib/modules/sunxi_usbc.ko
+
+on property:persist.sys.usb0device=1
+    copy  /sys/devices/platform/soc@3000000/10.usbc0/usb_device  /dev/null
+    setprop persist.adb.tls_server.enable 1
+
+on property:persist.sys.usb0device=0
+    copy  /sys/devices/platform/soc@3000000/10.usbc0/usb_host   /dev/null
+
+on property:persist.sys.usb.config=adb
+   setprop persist.adb.tls_server.enable 1
